@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# EXAMPLE USAGE:
+# $ sudo /opt/certa/bin/certa-remove <common_name>
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# GLOBAL
+
+CWD=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+# SOURCE certa.sh
+source "${CWD}/../lib/certa.sh"
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# MAIN
+
+remove_certificate ${1:?}
+

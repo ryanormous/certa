@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# EXAMPLE USAGE:
+# $ sudo /opt/certa/bin/certa-issue <subordinate name> <alt name1> <alt name2> <...>
+# 1ST ARG IS SUBORDINATE NAME; SUBSEQUENT NAMES, IF ANY, ARE SUBJECT ALTERNATIVE NAMES
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# GLOBAL
+
+CWD=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+# SOURCE certa.sh
+source "${CWD}/../lib/certa.sh"
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# MAIN
+
+issue_certificate "$@"
+
+

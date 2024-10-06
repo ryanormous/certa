@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# GLOBAL
+
+CWD=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+# SOURCE certa.sh
+source "${CWD}/../lib/certa.sh"
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# MAIN
+
+setup "$@"
+
